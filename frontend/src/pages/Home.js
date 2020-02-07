@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import qs from 'querystring';
 
+
 import api from '../services/api';
 
 import UserTable from '../components/table/UserTable';
@@ -43,6 +44,7 @@ class Home extends Component {
             });
     };
 
+
     deleteUser = id => {
 
         api.delete(`api/${id}`)
@@ -50,6 +52,7 @@ class Home extends Component {
                 this.refreshUserTable();
             });
     };
+    
 
     updateUser = (id, user) => {
         
